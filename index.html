@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Radha Sakthi - IT Consulting and Software Development Company in Austin, TX. Transforming businesses through innovative technology solutions.">
+    <meta name="keywords" content="IT Consulting, Software Development, Austin TX, Cloud Solutions, Digital Transformation">
+    <title>Radha Sakthi | IT Consulting & Software Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" width="40" height="40">
+                    <defs>
+                        <linearGradient id="featherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8"/>
+                            <stop offset="50%" style="stop-color:#00897b"/>
+                            <stop offset="100%" style="stop-color:#ffc107"/>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="25" cy="18" rx="12" ry="16" fill="url(#featherGrad)" opacity="0.9"/>
+                    <ellipse cx="25" cy="16" rx="6" ry="8" fill="#1a237e"/>
+                    <ellipse cx="25" cy="15" rx="3" ry="4" fill="#ffc107"/>
+                    <path d="M25 34 Q25 45 25 48" stroke="url(#featherGrad)" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Radha Sakthi</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                <li><a href="#contact" class="nav-link cta-btn">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        <div class="peacock-decoration left"></div>
+        <div class="peacock-decoration right"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Transforming Ideas</span>
+                    <span class="title-line highlight">Into Digital Excellence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Austin's premier IT consulting and software development partner.
+                    We blend innovation with tradition to deliver exceptional technology solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="feature-circle">
+                    <svg viewBox="0 0 400 400" class="peacock-eye-svg">
+                        <defs>
+                            <radialGradient id="eyeGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ffc107"/>
+                                <stop offset="30%" style="stop-color:#1a237e"/>
+                                <stop offset="60%" style="stop-color:#00897b"/>
+                                <stop offset="100%" style="stop-color:#1a73e8"/>
+                            </radialGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="200" cy="200" r="180" fill="none" stroke="url(#eyeGradient)" stroke-width="2" opacity="0.3"/>
+                        <circle cx="200" cy="200" r="140" fill="none" stroke="url(#eyeGradient)" stroke-width="2" opacity="0.5"/>
+                        <circle cx="200" cy="200" r="100" fill="none" stroke="url(#eyeGradient)" stroke-width="3" opacity="0.7"/>
+                        <ellipse cx="200" cy="200" rx="60" ry="80" fill="url(#eyeGradient)" filter="url(#glow)"/>
+                        <ellipse cx="200" cy="190" rx="25" ry="35" fill="#1a237e"/>
+                        <ellipse cx="200" cy="185" rx="12" ry="18" fill="#ffc107"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive IT solutions tailored to elevate your business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="8" width="48" height="36" rx="4"/>
+                            <line x1="8" y1="20" x2="56" y2="20"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                            <circle cx="22" cy="14" r="2" fill="currentColor"/>
+                            <circle cx="30" cy="14" r="2" fill="currentColor"/>
+                            <path d="M16 30 L24 38 L40 26"/>
+                            <line x1="24" y1="52" x2="40" y2="52"/>
+                            <line x1="32" y1="44" x2="32" y2="52"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Software Development</h3>
+                    <p>Bespoke software solutions designed to meet your unique business requirements, from web applications to enterprise systems.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="32" cy="16" rx="20" ry="8"/>
+                            <path d="M12 16 L12 32 C12 36.4 20.9 40 32 40 C43.1 40 52 36.4 52 32 L52 16"/>
+                            <ellipse cx="32" cy="32" rx="20" ry="8" stroke-dasharray="4 2"/>
+                            <path d="M12 32 L12 48 C12 52.4 20.9 56 32 56 C43.1 56 52 52.4 52 48 L52 32"/>
+                        </svg>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Seamless cloud migration, infrastructure management, and optimization on AWS, Azure, and Google Cloud platforms.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="24"/>
+                            <circle cx="32" cy="32" r="8"/>
+                            <line x1="32" y1="8" x2="32" y2="16"/>
+                            <line x1="32" y1="48" x2="32" y2="56"/>
+                            <line x1="8" y1="32" x2="16" y2="32"/>
+                            <line x1="48" y1="32" x2="56" y2="32"/>
+                            <line x1="15" y1="15" x2="21" y2="21"/>
+                            <line x1="43" y1="43" x2="49" y2="49"/>
+                            <line x1="15" y1="49" x2="21" y2="43"/>
+                            <line x1="43" y1="21" x2="49" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic technology advisory services to align your IT infrastructure with business goals and drive digital transformation.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="12" width="24" height="40" rx="2"/>
+                            <rect x="36" y="4" width="24" height="56" rx="2"/>
+                            <line x1="10" y1="44" x2="22" y2="44"/>
+                            <circle cx="16" cy="48" r="2" fill="currentColor"/>
+                            <line x1="42" y1="52" x2="54" y2="52"/>
+                            <circle cx="48" cy="56" r="2" fill="currentColor"/>
+                            <rect x="10" y="18" width="12" height="20" rx="1"/>
+                            <rect x="42" y="10" width="12" height="36" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 8 L56 20 L56 44 L32 56 L8 44 L8 20 Z"/>
+                            <path d="M32 8 L32 32 L8 20"/>
+                            <path d="M32 32 L56 20"/>
+                            <path d="M32 32 L32 56"/>
+                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Data & Analytics</h3>
+                    <p>Transform raw data into actionable insights with our advanced analytics, BI solutions, and data engineering services.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="24"/>
+                            <path d="M32 16 L32 32 L44 40"/>
+                            <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                            <path d="M20 8 L20 4"/>
+                            <path d="M44 8 L44 4"/>
+                            <path d="M20 60 L20 56"/>
+                            <path d="M44 60 L44 56"/>
+                        </svg>
+                    </div>
+                    <h3>Managed Services</h3>
+                    <p>24/7 monitoring, maintenance, and support to ensure your systems run smoothly and securely at all times.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="peacock-pattern"></div>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-target="10">10+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="150">150+</span>
+                                <span class="stat-label">Projects Delivered</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="50">50+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Bridging Tradition with Innovation</h2>
+                    <p class="about-description">
+                        Founded in Austin, Texas, Radha Sakthi embodies the perfect harmony between
+                        time-honored values and cutting-edge technology. Our name draws inspiration from
+                        the divine energy of Radha and the eternal beauty of the peacock feather,
+                        symbolizing grace, wisdom, and transformative power.
+                    </p>
+                    <p class="about-description">
+                        We believe in building lasting partnerships with our clients, understanding their
+                        unique challenges, and delivering solutions that not only meet but exceed expectations.
+                        Our team of seasoned professionals brings diverse expertise across industries,
+                        ensuring innovative approaches to every project we undertake.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <span>Quality Assured</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <span>On-Time Delivery</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <span>Agile Methodology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise" id="expertise">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="section-title">Technologies We Master</h2>
+                <p class="section-subtitle">Leveraging the latest technologies to build robust, scalable solutions</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Angular</span>
+                        <span class="tech-item">Vue.js</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Next.js</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Java</span>
+                        <span class="tech-item">.NET</span>
+                        <span class="tech-item">Go</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Azure</span>
+                        <span class="tech-item">GCP</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Data & AI</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">TensorFlow</span>
+                        <span class="tech-item">PyTorch</span>
+                        <span class="tech-item">Spark</span>
+                        <span class="tech-item">Snowflake</span>
+                        <span class="tech-item">Databricks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">The Radha Sakthi Difference</h2>
+            </div>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <h3>Client-Centric Approach</h3>
+                    <p>We prioritize understanding your business needs and goals, ensuring every solution is tailored to drive your success.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <h3>Technical Excellence</h3>
+                    <p>Our team comprises industry veterans with deep expertise across multiple technology domains and industries.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <h3>Transparent Communication</h3>
+                    <p>We believe in open, honest communication throughout the project lifecycle, keeping you informed at every step.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <h3>Long-term Partnership</h3>
+                    <p>Beyond project delivery, we build lasting relationships, supporting your growth with continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something Amazing Together</h2>
+                    <p class="contact-description">
+                        Ready to transform your business with innovative technology solutions?
+                        We'd love to hear from you. Reach out to us and let's start a conversation.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p>Austin, Texas, USA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>admin@radhasakthi.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="software">Custom Software Development</option>
+                                <option value="cloud">Cloud Solutions</option>
+                                <option value="consulting">IT Consulting</option>
+                                <option value="mobile">Mobile Development</option>
+                                <option value="data">Data & Analytics</option>
+                                <option value="managed">Managed Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" width="40" height="40">
+                            <defs>
+                                <linearGradient id="featherGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a73e8"/>
+                                    <stop offset="50%" style="stop-color:#00897b"/>
+                                    <stop offset="100%" style="stop-color:#ffc107"/>
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="25" cy="18" rx="12" ry="16" fill="url(#featherGrad2)" opacity="0.9"/>
+                            <ellipse cx="25" cy="16" rx="6" ry="8" fill="#1a237e"/>
+                            <ellipse cx="25" cy="15" rx="3" ry="4" fill="#ffc107"/>
+                            <path d="M25 34 Q25 45 25 48" stroke="url(#featherGrad2)" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="logo-text">Radha Sakthi</span>
+                    </a>
+                    <p class="footer-tagline">Transforming businesses through innovative technology solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Software Development</a></li>
+                            <li><a href="#services">Cloud Solutions</a></li>
+                            <li><a href="#services">IT Consulting</a></li>
+                            <li><a href="#services">Data Analytics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Radha Sakthi Solutions LLC. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
