@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Active navigation link highlighting
     initActiveNavLinks();
 
-    // Form submission handling
-    initContactForm();
 
     // Scroll animations
     initScrollAnimations();
@@ -136,146 +134,6 @@ function initActiveNavLinks() {
     highlightNavLink();
 }
 
-/**
- * Contact form handling
- */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        // Simple validation
-        if (!data.name || !data.email || !data.message) {
-            showNotification('Please fill in all required fields.', 'error');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            showNotification('Please enter a valid email address.', 'error');
-            return;
-        }
-
-        // Submit form to FormSubmit.co
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        // Send to FormSubmit.co (emails go to admin@radhasakthi.com)
-        fetch('https://formsubmit.co/ajax/admin@radhasakthi.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: data.name,
-                email: data.email,
-                company: data.company || 'Not provided',
-                service: data.service || 'Not specified',
-                message: data.message,
-                _subject: 'New Contact Form Submission - Radha Sakthi Website'
-            })
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                showNotification('Thank you for your message! We will get back to you soon.', 'success');
-                form.reset();
-            } else {
-                showNotification('Something went wrong. Please try again or email us directly.', 'error');
-            }
-        })
-        .catch(error => {
-            console.error('Form submission error:', error);
-            showNotification('Something went wrong. Please try again or email us directly.', 'error');
-        })
-        .finally(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        });
-    });
-}
-
-/**
- * Show notification message
- */
-function showNotification(message, type = 'success') {
-    // Remove existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <span>${message}</span>
-        <button class="notification-close">&times;</button>
-    `;
-
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 16px 24px;
-        background: ${type === 'success' ? '#00897b' : '#e53935'};
-        color: white;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        z-index: 9999;
-        animation: slideIn 0.3s ease;
-        max-width: 400px;
-    `;
-
-    // Add animation keyframes
-    if (!document.querySelector('#notification-styles')) {
-        const style = document.createElement('style');
-        style.id = 'notification-styles';
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    document.body.appendChild(notification);
-
-    // Close button functionality
-    notification.querySelector('.notification-close').addEventListener('click', () => {
-        notification.remove();
-    });
-
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentNode) {
-            notification.style.animation = 'slideIn 0.3s ease reverse';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
-}
 
 /**
  * Scroll animations using Intersection Observer
@@ -391,6 +249,5 @@ function initTypingEffect(element, text, speed = 100) {
 
 // Export functions for potential external use
 window.RadhaSakthi = {
-    showNotification,
     initTypingEffect
 };
