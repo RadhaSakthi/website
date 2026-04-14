@@ -164,19 +164,45 @@ function initContactForm() {
             return;
         }
 
-        // Simulate form submission
+        // Submit form to FormSubmit.co
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            showNotification('Thank you for your message! We will get back to you soon.', 'success');
-            form.reset();
+        // Send to FormSubmit.co (emails go to admin@radhasakthi.com)
+        fetch('https://formsubmit.co/ajax/admin@radhasakthi.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                company: data.company || 'Not provided',
+                service: data.service || 'Not specified',
+                message: data.message,
+                _subject: 'New Contact Form Submission - Radha Sakthi Website'
+            })
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                showNotification('Thank you for your message! We will get back to you soon.', 'success');
+                form.reset();
+            } else {
+                showNotification('Something went wrong. Please try again or email us directly.', 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Form submission error:', error);
+            showNotification('Something went wrong. Please try again or email us directly.', 'error');
+        })
+        .finally(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 1500);
+        });
     });
 }
 
